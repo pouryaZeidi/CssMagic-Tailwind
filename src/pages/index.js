@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import TagComponent from "./components/tagdetails/TagComponent";
+import FlipCard from "./components/flipcards/Flipcard";
 
 
 const geistSans = localFont({
@@ -16,12 +17,14 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <div >
-      <main className="">
-     <div className="w-[80%] h-[70vh]">
-
+      <main className=" ">
         <TagComponent/>
-    
-      </div>
+        <div className="flex w-full h-auto justify-between items-center mt-10 ">
+        <FlipCard src={'/photo1.jpeg'} src2={'/photo2.jpg'}/>
+        <FlipCard src={'/photo1.jpeg'} src2={'/photo2.jpg'}/>
+        <FlipCard src={'/photo1.jpeg'} src2={'/photo2.jpg'}/>
+        </div>
+     
       </main>
       
     </div>
